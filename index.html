@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Reviews Request Machine (EN/ES) — Compliant, 48h Setup</title>
+  <meta name="description" content="Turn last month's happy customers into honest Google reviews—compliant, bilingual, live in 48 hours. No incentives, no review gating." />
+  <link rel="canonical" href="https://chriscanino19.github.io/reviews-landing/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Google Reviews Request Machine (EN/ES) — Compliant, 48h Setup" />
+  <meta property="og:description" content="Turn last month's happy customers into honest Google reviews—compliant, bilingual, live in 48 hours. No incentives, no review gating." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chriscanino19.github.io/reviews-landing/" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Google+Reviews+Request+Machine" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Google Reviews Request Machine (EN/ES) — Compliant, 48h Setup" />
+  <meta name="twitter:description" content="Turn last month's happy customers into honest Google reviews—compliant, bilingual, live in 48 hours." />
+  <meta name="twitter:image" content="https://via.placeholder.com/1200x630?text=Google+Reviews+Request+Machine" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- GSAP + ScrollTrigger (deferred to avoid blocking) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Lottie (deferred) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
+  <!-- Main JS (deferred) -->
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <!-- Test Mode Banner -->
+  <div class="test-banner" data-i18n="testBanner">TEST MODE — All payment links are for testing purposes only</div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        <span data-i18n="logo">Reviews Request Machine</span>
+      </div>
+
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#packages" data-i18n="navPackages">Packages</a></li>
+          <li><a href="#how-it-works" data-i18n="navHowItWorks">How it works</a></li>
+          <li><a href="#compliance" data-i18n="navCompliance">Compliance</a></li>
+          <li><a href="#faq" data-i18n="navFaq">FAQs</a></li>
+          <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-toggle" role="group" aria-label="Language toggle">
+        <button id="langEn" type="button" class="active" aria-pressed="true" aria-label="Switch to English">EN</button>
+        <button id="langEs" type="button" aria-pressed="false" aria-label="Switch to Spanish">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <h1 data-i18n="heroTitle">Google Reviews Request Machine (EN/ES)</h1>
+        <p data-i18n="heroSubtitle">Turn last month's happy customers into honest Google reviews—compliant, bilingual, live in 48 hours.</p>
+        <div class="hero-cta">
+          <a href="https://buy.stripe.com/test_cNi28qbzv57e8nfaJO2sM00" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="heroCtaStarter">Get Starter – $99</a>
+          <a href="https://buy.stripe.com/test_28E28qgTP1V27jb6ty2sM01" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="heroCtaStandard">Standard – $199</a>
+          <a href="https://buy.stripe.com/test_cNi6oGcDz2Z6gTLcRW2sM02" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="heroCtaPro">Rush/Pro – $299</a>
+        </div>
+      </div>
+
+      <div class="hero-lottie" id="heroLottie" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="social-proof">
+    <div class="container">
+      <h2 class="text-center" data-i18n="socialProofTitle">What Our Clients Say</h2>
+      <div class="testimonials">
+        <div class="testimonial-card">
+          <p>"This service helped us increase our Google reviews by 40% in just one month. Completely compliant and hassle-free."</p>
+          <p><strong>— Restaurant Owner</strong></p>
+        </div>
+        <div class="testimonial-card">
+          <p>"The bilingual feature is perfect for our customer base. We've seen a significant improvement in our online reputation."</p>
+          <p><strong>— Retail Manager</strong></p>
+        </div>
+        <div class="testimonial-card">
+          <p>"Fast setup and excellent results. Our review count has doubled since using this service."</p>
+          <p><strong>— Service Provider</strong></p>
+        </div>
+      </div>
+
+      <div class="client-logos" aria-label="Client logos">
+        <div class="client-logo">Client A</div>
+        <div class="client-logo">Client B</div>
+        <div class="client-logo">Client C</div>
+        <div class="client-logo">Client D</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages -->
+  <section class="packages" id="packages">
+    <div class="container">
+      <h2 class="text-center" data-i18n="packagesTitle">Choose Your Package</h2>
+      <div class="package-cards">
+        <div class="package-card">
+          <h3 data-i18n="packageStarterTitle">Starter</h3>
+          <div class="package-price">$99</div>
+          <ul class="package-features">
+            <li data-i18n="packageStarterFeature1">Up to 100 review requests</li>
+            <li data-i18n="packageStarterFeature2">English or Spanish</li>
+            <li data-i18n="packageStarterFeature3">Basic setup</li>
+            <li data-i18n="packageStarterFeature4">Email support</li>
+          </ul>
+          <a href="https://buy.stripe.com/test_cNi28qbzv57e8nfaJO2sM00" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block" data-i18n="packageStarterCta">Get Starter</a>
+          <p class="package-note" data-i18n="packageNote">You'll complete a 3-minute onboarding after checkout.</p>
+        </div>
+
+        <div class="package-card featured">
+          <h3 data-i18n="packageStandardTitle">Standard</h3>
+          <div class="package-price">$199</div>
+          <ul class="package-features">
+            <li data-i18n="packageStandardFeature1">Up to 300 review requests</li>
+            <li data-i18n="packageStandardFeature2">Bilingual (EN/ES)</li>
+            <li data-i18n="packageStandardFeature3">Custom branding</li>
+            <li data-i18n="packageStandardFeature4">Priority support</li>
+          </ul>
+          <a href="https://buy.stripe.com/test_28E28qgTP1V27jb6ty2sM01" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block" data-i18n="packageStandardCta">Get Standard</a>
+          <p class="package-note" data-i18n="packageNote">You'll complete a 3-minute onboarding after checkout.</p>
+        </div>
+
+        <div class="package-card">
+          <h3 data-i18n="packageProTitle">Rush/Pro</h3>
+          <div class="package-price">$299</div>
+          <ul class="package-features">
+            <li data-i18n="packageProFeature1">Up to 500 review requests</li>
+            <li data-i18n="packageProFeature2">Bilingual (EN/ES)</li>
+            <li data-i18n="packageProFeature3">24-hour setup</li>
+            <li data-i18n="packageProFeature4">Dedicated support</li>
+          </ul>
+          <a href="https://buy.stripe.com/test_cNi6oGcDz2Z6gTLcRW2sM02" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block" data-i18n="packageProCta">Get Rush/Pro</a>
+          <p class="package-note" data-i18n="packageNote">You'll complete a 3-minute onboarding after checkout.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <h2 class="text-center" data-i18n="howItWorksTitle">How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-icon">🛒</div>
+          <h3 data-i18n="step1Title">Buy & Onboard</h3>
+          <p data-i18n="step1Desc">Select your package and complete our simple 3-minute onboarding process.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-icon">📧</div>
+          <h3 data-i18n="step2Title">We Send Requests</h3>
+          <p data-i18n="step2Desc">We send personalized review requests to your customers with a polite follow-up reminder.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-icon">📊</div>
+          <h3 data-i18n="step3Title">Get Results</h3>
+          <p data-i18n="step3Desc">Receive weekly summary reports with your new review count and customer feedback.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance -->
+  <section class="compliance" id="compliance">
+    <div class="container">
+      <h2 class="text-center" data-i18n="complianceTitle">Compliance Guaranteed</h2>
+      <div class="compliance-content">
+        <p data-i18n="complianceIntro">We strictly follow Google's review guidelines and best practices:</p>
+        <ul class="compliance-list">
+          <li data-i18n="compliancePoint1">No incentives</li>
+          <li data-i18n="compliancePoint2">No review gating</li>
+          <li data-i18n="compliancePoint3">We ask all recent customers</li>
+          <li data-i18n="compliancePoint4">Clear opt-out in every email</li>
+        </ul>
+        <p data-i18n="complianceConsent">We only use consented contact lists provided by you.</p>
+
+        <div class="compliance-note">
+          <p data-i18n="complianceNote">All emails can be in English, Spanish, or both languages according to your preference.</p>
+        </div>
+
+        <p data-i18n="complianceGoogleNote">Google prohibits incentivized or gated reviews; we comply fully with all guidelines.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <h2 class="text-center" data-i18n="faqTitle">Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question" data-i18n="faqQuestion1">Is this service compliant with Google's review policies?</div>
+          <div class="faq-answer" data-i18n="faqAnswer1">Yes, we strictly follow Google's review guidelines. We never offer incentives for reviews, don't gate reviews, and always include a clear opt-out option in every email we send.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" data-i18n="faqQuestion2">How quickly can I get started?</div>
+          <div class="faq-answer" data-i18n="faqAnswer2">After purchase, you'll complete a brief onboarding process. We'll launch your review request campaign within 48 hours, or 24 hours for the Rush/Pro package.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" data-i18n="faqQuestion3">What information do you need from me?</div>
+          <div class="faq-answer" data-i18n="faqAnswer3">We need your Google review link or QR code, a consented contact list of recent customers, your preferred sender email address, and your logo/brand tone information.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" data-i18n="faqQuestion4">How is customer data handled?</div>
+          <div class="faq-answer" data-i18n="faqAnswer4">We only use the contact list you provide and never share it with third parties. All customer data is securely stored and deleted after the campaign is complete.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" data-i18n="faqQuestion5">What email domain will be used to send requests?</div>
+          <div class="faq-answer" data-i18n="faqAnswer5">We can use your business email domain or our dedicated sending domain. Both options are configured for optimal deliverability and compliance.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" data-i18n="faqQuestion6">What kind of results can I expect?</div>
+          <div class="faq-answer" data-i18n="faqAnswer6">Results vary by industry and customer satisfaction, but our clients typically see a 20-40% increase in Google reviews within the first month of using our service.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 data-i18n="contactTitle">Ready to Get Started?</h2>
+      <p data-i18n="contactSubtitle">Have questions? Reach out to our team for more information.</p>
+      <div class="contact-cta">
+        <a href="mailto:info@reviewsrequestmachine.com" class="btn btn-outline" data-i18n="contactEmail">Email Us</a>
+        <!-- TODO: Replace # with actual onboarding URL when live -->
+        <a href="#" class="btn btn-primary pulse" data-i18n="contactOnboarding">Start Onboarding</a>
+      </div>
+      <p class="mt-3" data-i18n="contactTestNote">Note: Stripe test links are for preview purposes only.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4 data-i18n="footerProduct">Product</h4>
+          <ul>
+            <li><a href="#packages" data-i18n="footerPackages">Packages</a></li>
+            <li><a href="#how-it-works" data-i18n="footerHowItWorks">How It Works</a></li>
+            <li><a href="#compliance" data-i18n="footerCompliance">Compliance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 data-i18n="footerCompany">Company</h4>
+          <ul>
+            <li><a href="#faq" data-i18n="footerFaq">FAQ</a></li>
+            <li><a href="#contact" data-i18n="footerContact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 data-i18n="footerLegal">Legal</h4>
+          <ul>
+            <li><a href="#" data-i18n="footerPrivacy">Privacy Policy</a></li>
+            <li><a href="#" data-i18n="footerTerms">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footerCopyright">&copy; 2023 Reviews Request Machine. All rights reserved.</p>
+        <p data-i18n="footerComplianceNote">Google prohibits incentivized or gated reviews; we comply fully.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <div class="back-to-top" id="backToTop" role="button" aria-label="Back to top" title="Back to top" tabindex="0">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </div>
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Google Reviews Request (EN/ES)",
+    "description": "Turn last month's happy customers into honest Google reviews—compliant, bilingual, live in 48 hours.",
+    "areaServed": ["US", "PR"],
+    "provider": {
+      "@type": "Organization",
+      "name": "Reviews Request Machine"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Starter Package",
+        "price": "99.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Standard Package",
+        "price": "199.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Rush/Pro Package",
+        "price": "299.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  }
+  </script>
+
+  <noscript>
+    <div style="background:#fff3cd;color:#1f2937;padding:1rem;text-align:center;">
+      JavaScript is disabled; interactive animations and language toggle are unavailable.
+    </div>
+  </noscript>
+</body>
+</html>
