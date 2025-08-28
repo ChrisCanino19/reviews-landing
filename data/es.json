@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "value": "Valor",
+    "packages": "Paquetes",
+    "how": "Cómo funciona",
+    "faq": "Preguntas",
+    "cta": "Empezar"
+  },
+  "hero": {
+    "title": "Convierte a los clientes felices del mes pasado en reseñas honestas de Google—cumple con las políticas, bilingüe y listo en 48 horas.",
+    "subtitle": "Empieza a aprovechar el poder de tus clientes satisfechos. Configuramos correos electrónicos de solicitud de reseñas que facilitan y hacen honesto dejar comentarios.",
+    "ctaStarter": "Inicial $99",
+    "ctaStandard": "Estándar $199",
+    "ctaPro": "Urgente/Pro $299"
+  },
+  "value": {
+    "heading": "Por qué elegirnos",
+    "compliant": {
+      "title": "100% Cumplimiento",
+      "body": "Sin incentivos, sin filtrar—solo comentarios honestos enviados con consentimiento y opción para dejar de recibir."
+    },
+    "fast": {
+      "title": "Configuración Rápida",
+      "body": "Tu campaña estará activa en 48 horas después de recibir tu enlace de reseña y lista consentida."
+    },
+    "trackable": {
+      "title": "Indicadores Medibles",
+      "body": "Enviamos resúmenes semanales: tasas de apertura, clics y conteos de reseñas para mantenerte informado."
+    },
+    "bilingual": {
+      "title": "Bilingüe (EN/ES)",
+      "body": "Llega a clientes en inglés y español con correos traducidos profesionalmente."
+    }
+  },
+  "packages": {
+    "heading": "Elige tu paquete",
+    "starter": {
+      "title": "Inicial",
+      "price": "$99",
+      "items": [
+        "Un envío de correo a tu lista",
+        "Plantilla de correo personalizada",
+        "Gestión de consentimiento y supresión",
+        "Resumen de desempeño por 2 semanas"
+      ]
+    },
+    "standard": {
+      "title": "Estándar",
+      "price": "$199",
+      "items": [
+        "Hasta 2 recordatorios de seguimiento",
+        "Pruebas A/B de asunto",
+        "Página de destino con tu enlace o QR de reseña",
+        "Resumen de desempeño por 1 mes"
+      ]
+    },
+    "pro": {
+      "title": "Urgente/Pro",
+      "price": "$299",
+      "items": [
+        "Configuración prioritaria en 24h",
+        "Todas las funciones Estándar",
+        "Personalización de idioma por región",
+        "Llamada de éxito dedicada"
+      ]
+    }
+  },
+  "howit": {
+    "heading": "Cómo funciona",
+    "1": {
+      "title": "Compra tu paquete",
+      "body": "Elige el plan que se adapte a tus necesidades y paga de forma segura con Stripe."
+    },
+    "2": {
+      "title": "Onboarding y carga",
+      "body": "Envíanos tu enlace o código QR de reseña de Google y tu lista de clientes con consentimiento."
+    },
+    "3": {
+      "title": "Enviamos y reportamos",
+      "body": "Construimos, probamos y enviamos en 48 horas y entregamos resúmenes semanales."
+    }
+  },
+  "proof": {
+    "title": "Prueba e Informes",
+    "items": [
+      "“Recibí más reseñas en una semana que en todo el año pasado.” – Sara, Plomera",
+      "“Los correos bilingües aumentaron las respuestas de nuestros clientes hispanohablantes.” – Luis, Contratista",
+      "El resumen semanal incluye aperturas, clics y nuevos conteos de reseñas."
+    ]
+  },
+  "compliance": {
+    "title": "Cumplimiento y Confianza",
+    "body": "Sin incentivos. Sin filtrar reseñas negativas. Correos solo a contactos con consentimiento con opción clara de exclusión."
+  },
+  "faq": {
+    "heading": "Preguntas frecuentes",
+    "q1": "¿Cumple este servicio con las políticas de reseñas de Google?",
+    "a1": "Sí. No incentivamos reseñas ni filtramos comentarios negativos. Solo enviamos a contactos con consentimiento y con una opción clara para dejar de recibir.",
+    "q2": "¿Qué información necesitan de mí?",
+    "a2": "Necesitamos el enlace o código QR de reseña de tu negocio y una lista CSV de clientes que hayan dado su consentimiento para recibir solicitudes.",
+    "q3": "¿Cuándo estará activa mi campaña?",
+    "a3": "Nuestro objetivo es lanzar dentro de las 48 horas de recibir tu enlace y lista. Los pedidos urgentes tienen prioridad.",
+    "q4": "¿Pueden enviar correos en español?",
+    "a4": "Claro. Nuestros correos están profesionalmente localizados en inglés y español para adaptarse a tu audiencia.",
+    "q5": "¿Qué pasa si no estoy satisfecho?",
+    "a5": "Si no cumplimos con la ventana de preparación de 48 horas antes de enviar, eres elegible para un reembolso completo. Contáctanos para soporte.",
+    "q6": "¿Cuánto tiempo conservan mis datos?",
+    "a6": "Conservamos tus datos solo para enviar solicitudes de reseña y generar resúmenes. Se eliminan de forma segura 30 días después de completar la campaña o bajo solicitud.",
+    "q7": "¿Proveen recordatorios?",
+    "a7": "Nuestros paquetes Estándar y Pro incluyen hasta dos recordatorios amables para aumentar la tasa de respuestas."
+  },
+  "cta": {
+    "title": "¿Listo en 48h?"
+  },
+  "footer": {
+    "rights": "© {{year}} Google Reviews Request Machine. Todos los derechos reservados.",
+    "links": {
+      "privacy": "Privacidad",
+      "terms": "Términos"
+    }
+  }
+}
