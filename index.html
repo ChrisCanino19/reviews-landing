@@ -1,0 +1,299 @@
+<!--
+  README
+  ======
+
+  This static site sells the "Google Reviews Request Machine" service. To switch from test mode to live mode, edit `assets/js/main.js` and set `CONFIG.testMode` to false, then replace the Stripe test links in `CONFIG.stripe` with your live Payment Link URLs. Colors and spacing are defined as CSS variables in `assets/css/styles.css`; adjust those values to change the look and feel. All copy strings live in the JSON files in `/data`. Update those files to modify text or to add additional languages.
+-->
+<!DOCTYPE html>
+<html lang="en" data-ready>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Reviews Request Machine</title>
+  <meta name="description" content="Turn last month’s happy customers into honest Google reviews—compliant, bilingual, and live in 48 hours.">
+  <link rel="canonical" href="./">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Optionally load a display font (Montserrat) under 100KB -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Google Reviews Request Machine">
+  <meta property="og:description" content="Turn last month’s happy customers into honest Google reviews—compliant, bilingual, and live in 48 hours.">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:url" content="./">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Google Reviews Request Machine">
+  <meta name="twitter:description" content="Turn last month’s happy customers into honest Google reviews—compliant, bilingual, and live in 48 hours.">
+  <meta name="twitter:image" content="og-image.png">
+  <!-- JSON‑LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Google Reviews Request Machine",
+    "description": "Compliant review request service that prepares bilingual email campaigns within 48 hours.",
+    "areaServed": ["United States", "Puerto Rico"],
+    "availableLanguage": ["en", "es"],
+    "url": "./",
+    "provider": {
+      "@type": "Organization",
+      "name": "Google Reviews Request Machine"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Starter",
+        "price": "99.00",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Standard",
+        "price": "199.00",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pro",
+        "price": "299.00",
+        "priceCurrency": "USD"
+      }
+    ],
+    "isRelatedTo": {
+      "@type": "Service",
+      "name": "Google Business Profile Reviews"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <!-- Top bar with language toggle and test ribbon -->
+  <div id="top-bar">
+    <div class="progress-container" aria-hidden="true">
+      <div id="scroll-progress" class="progress-bar"></div>
+    </div>
+    <div id="test-banner" class="test-banner" hidden>TEST MODE: Stripe links are in test mode.</div>
+    <div class="language-toggle" role="group" aria-label="Language toggle">
+      <button id="lang-en" class="lang-btn" aria-pressed="true">EN</button>
+      <button id="lang-es" class="lang-btn" aria-pressed="false">ES</button>
+    </div>
+  </div>
+  <!-- Header / Navigation -->
+  <header id="header" class="header">
+    <div class="container header-content">
+      <a href="#" class="logo">GRRM</a>
+      <nav id="nav" class="nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="#value" data-i18n="nav.value">Value</a></li>
+          <li><a href="#packages" data-i18n="nav.packages">Packages</a></li>
+          <li><a href="#howit" data-i18n="nav.how">How it works</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+          <li><a href="#cta" class="btn btn-primary small" data-i18n="nav.cta">Get started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Main content -->
+  <main id="main" class="main">
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-content reveal">
+        <h1 data-i18n="hero.title">Turn last month’s happy customers into honest Google reviews—compliant, bilingual, and live in 48 hours.</h1>
+        <p data-i18n="hero.subtitle">Start harnessing the power of your satisfied customers. We set up compliant review request emails that make leaving feedback easy and honest.</p>
+        <div class="cta-group">
+          <a href="#packages" class="btn btn-primary" data-i18n="hero.ctaStarter">Starter $99</a>
+          <a href="#packages" class="btn btn-secondary" data-i18n="hero.ctaStandard">Standard $199</a>
+          <a href="#packages" class="btn btn-tertiary" data-i18n="hero.ctaPro">Rush/Pro $299</a>
+        </div>
+        <small class="compliance-note" data-i18n="compliance.body">No incentives. No review gating. Emails only to consenting contacts with clear opt-out.</small>
+      </div>
+    </section>
+    <!-- Value Props Section -->
+    <section id="value" class="value section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="value.heading">Why choose us</h2>
+        <div class="grid value-grid">
+          <div class="card reveal">
+            <div class="icon" aria-hidden="true">
+              <!-- compliance icon (shield) -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L3 5V11C3 16.52 6.85 21.74 12 23C17.15 21.74 21 16.52 21 11V5L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 data-i18n="value.compliant.title">100% Compliant</h3>
+            <p data-i18n="value.compliant.body">No incentives, no gating—just honest feedback sent with clear consent and opt‑out.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon" aria-hidden="true">
+              <!-- fast icon (clock) -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                <polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 data-i18n="value.fast.title">Fast Setup</h3>
+            <p data-i18n="value.fast.body">Your campaign is live within 48 hours of receiving your review link and consented list.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon" aria-hidden="true">
+              <!-- trackable icon (chart) -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 3V21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="7" y="14" width="3" height="6" fill="currentColor"/>
+                <rect x="12" y="10" width="3" height="10" fill="currentColor"/>
+                <rect x="17" y="6" width="3" height="14" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 data-i18n="value.trackable.title">Trackable KPIs</h3>
+            <p data-i18n="value.trackable.body">We send weekly summaries: open rates, clicks, and review counts to keep you informed.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon" aria-hidden="true">
+              <!-- bilingual icon (globe) -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                <line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 2C15.3137 5.31371 17 8.68629 17 12C17 15.3137 15.3137 18.6863 12 22C8.68629 18.6863 7 15.3137 7 12C7 8.68629 8.68629 5.31371 12 2Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3 data-i18n="value.bilingual.title">Bilingual (EN/ES)</h3>
+            <p data-i18n="value.bilingual.body">Reach customers in English and Spanish with professionally translated email copy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Packages Section -->
+    <section id="packages" class="packages section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="packages.heading">Choose your package</h2>
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="starter" aria-selected="true" role="tab" data-i18n="packages.starter.title">Starter</button>
+          <button class="tab" data-tab="standard" aria-selected="false" role="tab" data-i18n="packages.standard.title">Standard</button>
+          <button class="tab" data-tab="pro" aria-selected="false" role="tab" data-i18n="packages.pro.title">Rush/Pro</button>
+        </div>
+        <div class="tab-panels">
+          <div id="panel-starter" class="tab-panel active" role="tabpanel">
+            <div class="package-card reveal">
+              <h3 data-i18n="packages.starter.title">Starter</h3>
+              <p class="price" data-i18n="packages.starter.price">$99</p>
+              <ul class="package-list" id="starter-list"></ul>
+              <button class="btn btn-primary package-btn" data-package="starter" data-i18n="hero.ctaStarter">Starter $99</button>
+            </div>
+          </div>
+          <div id="panel-standard" class="tab-panel" role="tabpanel" hidden>
+            <div class="package-card reveal">
+              <h3 data-i18n="packages.standard.title">Standard</h3>
+              <p class="price" data-i18n="packages.standard.price">$199</p>
+              <ul class="package-list" id="standard-list"></ul>
+              <button class="btn btn-primary package-btn" data-package="standard" data-i18n="hero.ctaStandard">Standard $199</button>
+            </div>
+          </div>
+          <div id="panel-pro" class="tab-panel" role="tabpanel" hidden>
+            <div class="package-card reveal">
+              <h3 data-i18n="packages.pro.title">Rush/Pro</h3>
+              <p class="price" data-i18n="packages.pro.price">$299</p>
+              <ul class="package-list" id="pro-list"></ul>
+              <button class="btn btn-primary package-btn" data-package="pro" data-i18n="hero.ctaPro">Rush/Pro $299</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- How It Works Section -->
+    <section id="howit" class="howit section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="howit.heading">How it works</h2>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step-number">1</div>
+            <h3 data-i18n="howit.1.title">Buy your package</h3>
+            <p data-i18n="howit.1.body">Pick the plan that matches your needs and checkout securely via Stripe.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-number">2</div>
+            <h3 data-i18n="howit.2.title">Onboard & Upload</h3>
+            <p data-i18n="howit.2.body">Send us your Google review link/QR and list of customers (with consent).</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-number">3</div>
+            <h3 data-i18n="howit.3.title">We send & report</h3>
+            <p data-i18n="howit.3.body">We build, test, and send within 48 hours and deliver weekly summaries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Proof Section -->
+    <section id="proof" class="proof section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="proof.title">Proof & Reporting</h2>
+        <div class="grid proof-grid">
+          <div class="testimonial-card reveal">
+            <p data-i18n="proof.items.0">“I received more reviews in a week than all last year!” – Sarah, Plumber</p>
+          </div>
+          <div class="testimonial-card reveal">
+            <p data-i18n="proof.items.1">“The bilingual emails increased responses from our Spanish-speaking customers.” – Luis, Contractor</p>
+          </div>
+          <div class="testimonial-card reveal">
+            <p data-i18n="proof.items.2">Weekly summary includes opens, clicks, and new review counts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Compliance Callout Section -->
+    <section id="compliance" class="compliance section">
+      <div class="container">
+        <div class="compliance-box reveal">
+          <h2 data-i18n="compliance.title">Compliance & Trust</h2>
+          <p data-i18n="compliance.body">No incentives. No review gating. Emails only to consenting contacts with clear opt-out.</p>
+          <button class="btn btn-link copy-btn" data-copy-target="compliance.body" aria-label="Copy policy text">Copy policy text</button>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Section -->
+    <section id="faq" class="faq section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="faq.heading">Frequently asked questions</h2>
+        <div class="faq-list">
+          <!-- FAQs will be inserted here via JSON data -->
+        </div>
+      </div>
+    </section>
+    <!-- CTA Strip Section -->
+    <section id="cta" class="cta-strip section">
+      <div class="container reveal">
+        <h2 data-i18n="cta.title">Ready in 48h?</h2>
+        <div class="cta-group">
+          <button class="btn btn-primary package-btn" data-package="starter" data-i18n="hero.ctaStarter">Starter $99</button>
+          <button class="btn btn-secondary package-btn" data-package="standard" data-i18n="hero.ctaStandard">Standard $199</button>
+          <button class="btn btn-tertiary package-btn" data-package="pro" data-i18n="hero.ctaPro">Rush/Pro $299</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p data-i18n="footer.rights">© <span id="year"></span> Google Reviews Request Machine. All rights reserved.</p>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="privacy.html" data-i18n="footer.links.privacy">Privacy</a></li>
+          <li><a href="terms.html" data-i18n="footer.links.terms">Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
