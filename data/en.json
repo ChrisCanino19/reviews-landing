@@ -1,0 +1,129 @@
+{
+  "businessName": "Google Reviews Request Machine",
+  "nav": {
+    "menu": "Menu",
+    "packages": "Packages",
+    "how": "How it works",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Turn last month’s happy customers into honest Google reviews—compliant, bilingual, and live in 48 hours.",
+    "subtitle": "We set up compliant review request emails (EN/ES) for your consenting customers—no incentives, no gating. Done in 48 hours. Weekly KPI summaries.",
+    "ctaStarter": "Starter — $99",
+    "ctaStandard": "Standard — $199",
+    "ctaPro": "Rush/Pro — $299",
+    "note": "No incentives. No review gating. Emails only to consenting contacts with clear opt-out."
+  },
+  "value": {
+    "title": "Built for compliant growth",
+    "compliant": {
+      "title": "Compliant by design",
+      "body": "No incentives. No review gating. Emails only to consenting contacts with clear opt-out."
+    },
+    "fast": {
+      "title": "Live in 48 hours",
+      "body": "We set up templates, lists, and schedule within two business days—refund if we miss it pre‑send."
+    },
+    "trackable": {
+      "title": "Trackable KPIs",
+      "body": "Weekly email with opens, clicks, and review count delta."
+    },
+    "bilingual": {
+      "title": "Bilingual EN/ES",
+      "body": "Templates and support in English and Spanish. Perfect for US & Puerto Rico."
+    }
+  },
+  "packages": {
+    "title": "Packages",
+    "starter": {
+      "title": "Starter",
+      "price": "$99",
+      "items": [
+        "1 branded review‑request email (EN or ES)",
+        "One‑time send to up to 300 contacts",
+        "Compliance check + suppression list",
+        "Setup within 48h"
+      ]
+    },
+    "standard": {
+      "title": "Standard",
+      "price": "$199",
+      "items": [
+        "2 bilingual templates (EN + ES)",
+        "Segmented send up to 1,000 contacts",
+        "One follow‑up reminder",
+        "Weekly KPI summary (4 weeks)"
+      ]
+    },
+    "pro": {
+      "title": "Rush/Pro",
+      "price": "$299",
+      "items": [
+        "Everything in Standard",
+        "Rush setup in 24h",
+        "A/B subject line test",
+        "Hands‑on deliverability review"
+      ]
+    },
+    "cta": "Buy",
+    "note": "Refund if 48h window is missed pre‑send."
+  },
+  "howit": {
+    "title": "How it works",
+    "1": {
+      "title": "Buy",
+      "body": "Pick a package and pay securely via Stripe."
+    },
+    "2": {
+      "title": "Onboard",
+      "body": "Share your review link/QR, brand logo/colors, and a consented contact list (.csv)."
+    },
+    "3": {
+      "title": "Send & Summary",
+      "body": "We send (or hand off) and email you weekly KPIs: opens, clicks, and review count delta."
+    }
+  },
+  "proof": {
+    "title": "Results & reporting",
+    "items": [
+      "“We finally captured real reviews without nagging.” — Local Spa",
+      "“The Spanish template doubled response in PR.” — HVAC Owner",
+      "“Loved the weekly KPI digest.” — Dental Clinic"
+    ],
+    "kpiTitle": "Your weekly KPI summary includes:",
+    "kpi1": "Email opens",
+    "kpi2": "Link clicks",
+    "kpi3": "Change in Google review count"
+  },
+  "compliance": {
+    "title": "Compliance & policy",
+    "body": "No incentives. No review gating. Emails only to consenting contacts with clear opt-out.",
+    "copy": "Copy policy text"
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": "Is this compliant?",
+    "a1": "Yes: no incentives, no gating, only to consented contacts. Every email includes a clear opt‑out.",
+    "q2": "What do you need from us?",
+    "a2": "Your Google review link or QR, a consented CSV of contacts, brand logo/colors, and a sender domain (or we can use a sending service).",
+    "q3": "Do you send the emails?",
+    "a3": "We can schedule and send via your provider or hand off assets for your team—your choice.",
+    "q4": "How fast is setup?",
+    "a4": "48 hours (business). Pro includes a 24h rush option. If we miss the 48h pre‑send window, you can request a refund.",
+    "q5": "Do you handle Spanish?",
+    "a5": "Yes. All packages support English and Spanish; Standard and Pro include fully bilingual templates.",
+    "q6": "How is data handled?",
+    "a6": "Data is used only to send review requests for the Client. Suppression lists are honored. Data is deleted upon request or 30 days after project completion. We never sell or share your data."
+  },
+  "cta": {
+    "title": "Ready in 48h?"
+  },
+  "footer": {
+    "note": "Bilingual service for US & Puerto Rico.",
+    "rights": "© {year} Google Reviews Request Machine. All rights reserved.",
+    "links": {
+      "privacy": "Privacy",
+      "terms": "Terms"
+    }
+  }
+}
