@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "value": "Value",
+    "packages": "Packages",
+    "how": "How it works",
+    "faq": "FAQ",
+    "cta": "Get started"
+  },
+  "hero": {
+    "title": "Turn last month’s happy customers into honest Google reviews—compliant, bilingual, and live in 48 hours.",
+    "subtitle": "Start harnessing the power of your satisfied customers. We set up compliant review request emails that make leaving feedback easy and honest.",
+    "ctaStarter": "Starter $99",
+    "ctaStandard": "Standard $199",
+    "ctaPro": "Rush/Pro $299"
+  },
+  "value": {
+    "heading": "Why choose us",
+    "compliant": {
+      "title": "100% Compliant",
+      "body": "No incentives, no gating—just honest feedback sent with clear consent and opt‑out."
+    },
+    "fast": {
+      "title": "Fast Setup",
+      "body": "Your campaign is live within 48 hours of receiving your review link and consented list."
+    },
+    "trackable": {
+      "title": "Trackable KPIs",
+      "body": "We send weekly summaries: open rates, clicks, and review counts to keep you informed."
+    },
+    "bilingual": {
+      "title": "Bilingual (EN/ES)",
+      "body": "Reach customers in English and Spanish with professionally translated email copy."
+    }
+  },
+  "packages": {
+    "heading": "Choose your package",
+    "starter": {
+      "title": "Starter",
+      "price": "$99",
+      "items": [
+        "Single email send to your list",
+        "Customized email template",
+        "Consent & suppression management",
+        "Weekly performance summary for 2 weeks"
+      ]
+    },
+    "standard": {
+      "title": "Standard",
+      "price": "$199",
+      "items": [
+        "Up to 2 reminder follow‑ups",
+        "A/B subject line testing",
+        "Branded landing page with your Google review link or QR code",
+        "Weekly performance summary for 1 month"
+      ]
+    },
+    "pro": {
+      "title": "Rush/Pro",
+      "price": "$299",
+      "items": [
+        "Priority 24h setup",
+        "All Standard features",
+        "Language personalization by region",
+        "Dedicated success call"
+      ]
+    }
+  },
+  "howit": {
+    "heading": "How it works",
+    "1": {
+      "title": "Buy your package",
+      "body": "Pick the plan that matches your needs and checkout securely via Stripe."
+    },
+    "2": {
+      "title": "Onboard & Upload",
+      "body": "Send us your Google review link/QR and list of customers (with consent)."
+    },
+    "3": {
+      "title": "We send & report",
+      "body": "We build, test, and send within 48 hours and deliver weekly summaries."
+    }
+  },
+  "proof": {
+    "title": "Proof & Reporting",
+    "items": [
+      "“I received more reviews in a week than all last year!” – Sarah, Plumber",
+      "“The bilingual emails increased responses from our Spanish‑speaking customers.” – Luis, Contractor",
+      "Weekly summary includes opens, clicks, and new review counts."
+    ]
+  },
+  "compliance": {
+    "title": "Compliance & Trust",
+    "body": "No incentives. No review gating. Emails only to consenting contacts with clear opt‑out."
+  },
+  "faq": {
+    "heading": "Frequently asked questions",
+    "q1": "Is this service compliant with Google review policies?",
+    "a1": "Yes. We do not incentivize reviews or gate negative feedback. We only send to consenting contacts with an easy opt‑out.",
+    "q2": "What information do you need from me?",
+    "a2": "We need your business’s Google review link or QR code and a CSV list of customers who have consented to receive review requests.",
+    "q3": "How soon will my campaign be live?",
+    "a3": "We aim to launch within 48 hours of receiving your review link and list. Rush orders are prioritized.",
+    "q4": "Can you send emails in Spanish?",
+    "a4": "Absolutely. Our emails are professionally localized in English and Spanish to suit your audience.",
+    "q5": "What if I’m not satisfied?",
+    "a5": "If we miss the 48‑hour prep window before sending, you’re eligible for a full refund. Contact us for support.",
+    "q6": "How long do you retain my data?",
+    "a6": "We retain your customer data only for sending review requests and generating summaries. It is securely deleted 30 days after campaign completion or upon request.",
+    "q7": "Do you provide reminders?",
+    "a7": "Our Standard and Pro packages include up to two gentle reminder emails to increase response rates."
+  },
+  "cta": {
+    "title": "Ready in 48h?"
+  },
+  "footer": {
+    "rights": "© {{year}} Google Reviews Request Machine. All rights reserved.",
+    "links": {
+      "privacy": "Privacy",
+      "terms": "Terms"
+    }
+  }
+}
