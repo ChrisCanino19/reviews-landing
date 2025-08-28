@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Reviews Request Machine — EN/ES — 48h Setup</title>
+  <meta name="description" content="Compliant, bilingual (EN/ES) email flow that asks all recent customers for an honest Google review. No incentives. No gating. Live in 48 hours.">
+  <meta property="og:title" content="Google Reviews Request Machine — EN/ES — 48h Setup">
+  <meta property="og:description" content="Turn your recent customers into honest Google reviews, compliantly (no incentives/gating). 48h launch.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta name="theme-color" content="#0ea5e9">
+  <link rel="preload" href="assets/css/styles.css" as="style">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    window.APP_CONFIG = {
+      stripe: {
+        starter: "https://buy.stripe.com/test_cNi28qbzv57e8nfaJO2sM00",
+        standard: "https://buy.stripe.com/test_28E28qgTP1V27jb6ty2sM01",
+        pro: "https://buy.stripe.com/test_cNi6oGcDz2Z6gTLcRW2sM02"
+      },
+      onboardingURL: "#"
+    };
+  </script>
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <div id="testBanner" class="banner" hidden>TEST MODE: Payment links are in Stripe test mode. Replace with LIVE links before sharing publicly.</div>
+
+  <header class="site-header" data-reveal>
+    <a class="brand" href="#top" aria-label="Home">
+      <span class="brand-mark" aria-hidden="true">★</span>
+      <span class="brand-name">Reviews Request Machine</span>
+      <span class="brand-tag">EN/ES</span>
+    </a>
+
+    <nav class="nav">
+      <a href="#pricing" class="nav-link" data-i18n="nav.pricing">Pricing</a>
+      <a href="#how" class="nav-link" data-i18n="nav.how">How it works</a>
+      <a href="#compliance" class="nav-link" data-i18n="nav.compliance">Compliance</a>
+      <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
+    </nav>
+
+    <div class="actions">
+      <button id="langToggle" class="btn ghost" aria-pressed="false" aria-label="Change language">ES</button>
+      <a href="#pricing" class="btn cta" data-i18n="cta.getStarted">Get started</a>
+    </div>
+  </header>
+
+  <div id="progress"></div>
+
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="hero-content" data-reveal>
+        <h1 data-i18n="hero.title">Google Reviews Request Machine <span class="accent">(EN/ES)</span></h1>
+        <p class="lead" data-i18n="hero.subtitle">
+          Launch a compliant email flow that asks <em>all</em> recent customers for an honest Google review—
+          <strong>no incentives</strong>, <strong>no gating</strong>—live in 48 hours.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn cta" href="#pricing" data-i18n="cta.viewPricing">View pricing</a>
+          <a class="btn outline" href="#how" data-i18n="cta.seeHow">See how it works</a>
+        </div>
+        <p class="muted" data-i18n="hero.note">We only use consented lists. Every email includes an opt‑out and postal address.</p>
+      </div>
+      <div class="hero-demo" data-reveal>
+        <div class="demo-card">
+          <div class="demo-badge" data-i18n="demo.sample">Sample</div>
+          <div class="demo-body">
+            <div class="demo-line shimmer"></div>
+            <div class="demo-line shimmer w70"></div>
+            <div class="demo-line shimmer w50"></div>
+            <div class="demo-grid">
+              <div class="demo-box"></div>
+              <div class="demo-box"></div>
+              <div class="demo-box"></div>
+              <div class="demo-box"></div>
+            </div>
+          </div>
+          <div class="demo-foot">
+            <span class="chip" data-i18n="demo.kpis">Opens · Clicks · Reviews</span>
+            <span class="chip" data-i18n="demo.compliant">Compliant (no incentives/gating)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust" aria-label="Highlights">
+    <div class="wrap">
+      <ul class="highlights">
+        <li data-reveal>
+          <div class="icon">✅</div>
+          <div>
+            <h3 data-i18n="hi.compliantTitle">Compliant by design</h3>
+            <p data-i18n="hi.compliantBody">Google prohibits incentivized or gated reviews; our flow follows the rules.</p>
+          </div>
+        </li>
+        <li data-reveal>
+          <div class="icon">⚡</div>
+          <div>
+            <h3 data-i18n="hi.fastTitle">Fast 48h setup</h3>
+            <p data-i18n="hi.fastBody">Launch within 48 hours after onboarding—then weekly summaries.</p>
+          </div>
+        </li>
+        <li data-reveal>
+          <div class="icon">🌐</div>
+          <div>
+            <h3 data-i18n="hi.bilingualTitle">Bilingual EN/ES</h3>
+            <p data-i18n="hi.bilingualBody">English and Spanish templates increase response and trust.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="wrap">
+      <h2 data-i18n="how.title">How it works</h2>
+      <ol class="steps">
+        <li data-reveal>
+          <span class="step-num">1</span>
+          <div>
+            <h3 data-i18n="how.s1t">Buy & onboard (3 min)</h3>
+            <p data-i18n="how.s1b">Choose a package, then share your Google review link/QR, logo, and consented list.</p>
+          </div>
+        </li>
+        <li data-reveal>
+          <span class="step-num">2</span>
+          <div>
+            <h3 data-i18n="how.s2t">Send the request</h3>
+            <p data-i18n="how.s2b">We send a polite review request with a single reminder to non‑clickers.</p>
+          </div>
+        </li>
+        <li data-reveal>
+          <span class="step-num">3</span>
+          <div>
+            <h3 data-i18n="how.s3t">Track & improve</h3>
+            <p data-i18n="how.s3b">You get weekly opens/clicks plus updated review counts.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing" aria-label="Pricing">
+    <div class="wrap">
+      <h2 data-i18n="pricing.title">Pricing</h2>
+      <div class="plans">
+        <article class="plan" data-reveal>
+          <h3>Starter</h3>
+          <p class="price">$99</p>
+          <ul class="features">
+            <li data-i18n="p.starter.f1">1 campaign (≤300 contacts)</li>
+            <li data-i18n="p.starter.f2">1 reminder to non‑clickers</li>
+            <li data-i18n="p.starter.f3">EN/ES templates</li>
+            <li data-i18n="p.starter.f4">Weekly KPI email (2 weeks)</li>
+          </ul>
+          <a class="btn buy" data-plan="starter" href="#" aria-label="Checkout Starter">Buy Starter</a>
+        </article>
+
+        <article class="plan featured" data-reveal>
+          <div class="badge" data-i18n="p.popular">Popular</div>
+          <h3>Standard</h3>
+          <p class="price">$199</p>
+          <ul class="features">
+            <li data-i18n="p.standard.f1">Up to 1,000 contacts</li>
+            <li data-i18n="p.standard.f2">2 reminders to non‑clickers</li>
+            <li data-i18n="p.standard.f3">Branded sender setup guide</li>
+            <li data-i18n="p.standard.f4">Weekly KPI email (4 weeks)</li>
+          </ul>
+          <a class="btn buy" data-plan="standard" href="#" aria-label="Checkout Standard">Buy Standard</a>
+        </article>
+
+        <article class="plan" data-reveal>
+          <h3>Rush/Pro</h3>
+          <p class="price">$299</p>
+          <ul class="features">
+            <li data-i18n="p.pro.f1">Same‑day launch (assets ready)</li>
+            <li data-i18n="p.pro.f2">Custom segments (recency/type)</li>
+            <li data-i18n="p.pro.f3">Review‑count monitor + chart</li>
+            <li data-i18n="p.pro.f4">Team brief</li>
+          </ul>
+          <a class="btn buy" data-plan="pro" href="#" aria-label="Checkout Pro">Buy Pro</a>
+        </article>
+      </div>
+      <p class="muted center" data-i18n="pricing.note">Payment is captured up‑front. Launch within 48 hours post‑onboarding, or your setup fee is refunded.</p>
+    </div>
+  </section>
+
+  <section class="compliance" id="compliance">
+    <div class="wrap">
+      <h2 data-i18n="comp.title">Compliance</h2>
+      <ul class="bullets">
+        <li data-i18n="comp.b1"><strong>No incentives.</strong> We never offer discounts or gifts in exchange for reviews.</li>
+        <li data-i18n="comp.b2"><strong>No gating.</strong> We don’t filter by satisfaction; we ask all recent customers.</li>
+        <li data-i18n="comp.b3"><strong>Email rules.</strong> Clear opt‑out, truthful headers, and a postal address in every message.</li>
+        <li data-i18n="comp.b4"><strong>Consent only.</strong> We use lists the client confirms are consent‑based.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <h2 data-i18n="faq.title">FAQs</h2>
+      <div class="accordion">
+        <details data-reveal>
+          <summary data-i18n="faq.q1">Is this compliant with Google’s policies?</summary>
+          <p data-i18n="faq.a1">Yes—no incentives, no gating, and we ask all recent customers. We include opt‑out links and a postal address.</p>
+        </details>
+        <details data-reveal>
+          <summary data-i18n="faq.q2">What do you need from me?</summary>
+          <p data-i18n="faq.a2">Your Google review link/QR, brand logo, and a consented customer list (CSV). We launch after onboarding is complete.</p>
+        </details>
+        <details data-reveal>
+          <summary data-i18n="faq.q3">How long until it’s live?</summary>
+          <p data-i18n="faq.a3">Within 48 hours of receiving your onboarding inputs. Rush/Pro can launch same day if assets are ready.</p>
+        </details>
+        <details data-reveal>
+          <summary data-i18n="faq.q4">Do you send reminders?</summary>
+          <p data-i18n="faq.a4">Yes, we send one to two polite reminders to non‑clickers only—never based on sentiment.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h3>Contact</h3>
+          <p><a href="mailto:hello@example.com">hello@example.com</a></p>
+          <p class="muted" data-i18n="footer.addr">[Your business postal address here]</p>
+        </div>
+        <div>
+          <h3 data-i18n="footer.next">Next step</h3>
+          <p><a class="btn small outline" href="#pricing" data-i18n="cta.viewPricing">View pricing</a></p>
+          <p><a class="btn small" id="onboardingBtn" href="#" data-i18n="cta.onboard">Open onboarding</a></p>
+        </div>
+        <div class="foot-note">
+          <p>© <span id="year"></span> Reviews Request Machine • <span data-i18n="footer.disclaimer">We comply with Google’s review and email policies. No incentives. No gating.</span></p>
+          <p class="muted">Built for speed. Fully static. GitHub Pages compatible.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
