@@ -1,309 +1,201 @@
 <!doctype html>
-<html lang="en" data-theme="auto">
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Google Reviews Request Machine — EN/ES — 48h Setup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Compliant, bilingual (EN/ES) email flow that asks all recent customers for an honest Google review. No incentives. No gating. Live in 48 hours.">
-  <link rel="preload" href="assets/css/styles.css" as="style">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <meta name="color-scheme" content="dark light">
-  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://chriscanino19.github.io/reviews-landing/">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#111111">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Google Reviews Request Machine — EN/ES — 48h Setup">
+  <meta property="og:description" content="Compliant EN/ES email flow to request Google reviews. No incentives or gating. Live in 48 hours.">
+  <meta property="og:url" content="https://chriscanino19.github.io/reviews-landing/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://buy.stripe.com" crossorigin>
+  <link rel="dns-prefetch" href="https://buy.stripe.com">
+  <link rel="preload" as="fetch" href="./content/config.json" crossorigin="anonymous">
+  <link rel="preload" as="fetch" href="./content/en.json" crossorigin="anonymous">
+  <link rel="preload" as="fetch" href="./content/es.json" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <noscript><div class="noscript">This page needs JavaScript to load EN/ES content and Stripe links.</div></noscript>
 
-  <div id="testBanner" class="banner" hidden>
-    <span class="banner__text">TEST MODE: Stripe payment links are in test environment. Replace with LIVE links before sharing.</span>
-  </div>
-
-  <header class="site-header" data-reveal>
-    <div class="container header__inner">
-      <a href="#top" class="brand" aria-label="Home">
-        <img src="assets/img/logo.svg" alt="" width="28" height="28"/>
-        <span class="brand__name">Reviews Machine</span>
-      </a>
-
-      <nav class="nav" aria-label="Primary">
-        <a href="#how" class="nav__link" data-i18n="nav.how" data-lang="en">How it works</a>
-        <a href="#how" class="nav__link" data-i18n="nav.how" data-lang="es" hidden>Cómo funciona</a>
-
-        <a href="#pricing" class="nav__link" data-i18n="nav.pricing" data-lang="en">Pricing</a>
-        <a href="#pricing" class="nav__link" data-i18n="nav.pricing" data-lang="es" hidden>Precios</a>
-
-        <a href="#faq" class="nav__link" data-i18n="nav.faq" data-lang="en">FAQ</a>
-        <a href="#faq" class="nav__link" data-i18n="nav.faq" data-lang="es" hidden>FAQ</a>
-      </nav>
-
-      <div class="header__actions">
-        <button id="langToggle" class="btn btn--ghost" aria-label="Switch language">ES</button>
-        <button id="themeToggle" class="btn btn--ghost" aria-label="Toggle dark mode">🌗</button>
-        <a href="#pricing" class="btn btn--primary" data-i18n="cta.getStarted" data-lang="en">Get Started</a>
-        <a href="#pricing" class="btn btn--primary" data-i18n="cta.getStarted" data-lang="es" hidden>Empezar</a>
-      </div>
-    </div>
+  <!-- Header / Language toggle -->
+  <header class="wrap header" data-reveal>
+    <a class="brand" href="#top" aria-label="Home"><span class="logo" aria-hidden="true">★</span><span data-i18n="brand.name">Reviews Request Machine</span></a>
+    <nav class="nav">
+      <button class="lang" id="lang-en" data-lang="en" aria-pressed="true">EN</button>
+      <button class="lang" id="lang-es" data-lang="es" aria-pressed="false">ES</button>
+    </nav>
   </header>
 
-  <main id="main">
-    <!-- HERO -->
-    <section id="hero" class="section hero" data-reveal>
-      <div class="container grid-2">
-        <div class="hero__copy">
-          <h1 class="hero__title" data-lang="en">Google Reviews Request Machine <span class="accent">(EN/ES)</span></h1>
-          <h1 class="hero__title" data-lang="es" hidden>Generador de Reseñas de Google <span class="accent">(EN/ES)</span></h1>
+  <!-- Hero -->
+  <main id="top">
+    <section class="wrap hero" data-reveal>
+      <p class="eyebrow" data-i18n="hero.eyebrow">Compliant EN/ES</p>
+      <h1 class="headline">
+        <span class="headline-line" data-i18n="hero.h1a">Turn recent customers</span>
+        <span class="headline-line" data-i18n="hero.h1b">into honest Google reviews</span>
+      </h1>
+      <p class="sub" data-i18n="hero.sub">No incentives. No gating. Live in 48 hours.</p>
+      <div class="cta-row">
+        <a class="btn btn-dark" data-cta="starter" target="_blank" rel="noopener" data-i18n="cta.starter">Get Starter – $99</a>
+        <a class="btn btn-blue" data-cta="standard" target="_blank" rel="noopener" data-i18n="cta.standard">Standard – $199</a>
+        <a class="btn btn-green" data-cta="pro" target="_blank" rel="noopener" data-i18n="cta.pro">Rush/Pro – $299</a>
+      </div>
+      <div class="hero-note" data-i18n="hero.note">Compliant: Google prohibits incentivized or gated reviews. We follow that.</div>
+    </section>
 
-          <p class="hero__subtitle" data-lang="en">
-            Launch a <b>compliant</b>, bilingual email flow that asks <em>all</em> recent customers for an honest Google review—
-            <b>no incentives</b>, <b>no gating</b>—live in 48 hours.
-          </p>
-          <p class="hero__subtitle" data-lang="es" hidden>
-            Lanza un flujo de correos <b>cumplido</b> que le pide una reseña honesta en Google a <em>todos</em> los clientes recientes—
-            <b>sin incentivos</b>, <b>sin filtrar</b>—en 48 horas.
-          </p>
+    <!-- Logos row (placeholders) -->
+    <section class="wrap logos" aria-label="Trusted by" data-reveal>
+      <div class="logos-title" data-i18n="logos.title">Trusted by teams like</div>
+      <div class="logos-grid" role="list">
+        <div class="logo-box" role="listitem" aria-label="Logo placeholder 1"></div>
+        <div class="logo-box" role="listitem" aria-label="Logo placeholder 2"></div>
+        <div class="logo-box" role="listitem" aria-label="Logo placeholder 3"></div>
+        <div class="logo-box" role="listitem" aria-label="Logo placeholder 4"></div>
+        <div class="logo-box" role="listitem" aria-label="Logo placeholder 5"></div>
+      </div>
+    </section>
 
-          <ul class="hero__bullets">
-            <li data-lang="en"><span class="icon">✅</span> <b>Compliant:</b> Google prohibits incentivized or gated reviews; we follow that.</li>
-            <li data-lang="es" hidden><span class="icon">✅</span> <b>Cumple:</b> Google prohíbe reseñas con incentivos o filtradas; seguimos esas reglas.</li>
-            <li data-lang="en"><span class="icon">⚡</span> <b>Fast:</b> live within 48 hours after onboarding.</li>
-            <li data-lang="es" hidden><span class="icon">⚡</span> <b>Rápido:</b> activo en 48 horas después del onboarding.</li>
-            <li data-lang="en"><span class="icon">📈</span> <b>Trackable:</b> opens, clicks, and weekly review count summary.</li>
-            <li data-lang="es" hidden><span class="icon">📈</span> <b>Medible:</b> aperturas, clics y resumen semanal de reseñas.</li>
+    <!-- Social proof (placeholders) -->
+    <section class="wrap testimonials" data-reveal>
+      <h2 data-i18n="testimonials.heading">What clients say</h2>
+      <div class="cards">
+        <article class="tcard">
+          <p class="quote" data-i18n="testimonials.q1">“+15 reviews in 2 weeks. Setup took less than 48 hours.”</p>
+          <div class="who" data-i18n="testimonials.a1">Owner — Home services</div>
+        </article>
+        <article class="tcard">
+          <p class="quote" data-i18n="testimonials.q2">“Clear, compliant, and bilingual. Exactly what we needed.”</p>
+          <div class="who" data-i18n="testimonials.a2">Manager — Clinic</div>
+        </article>
+        <article class="tcard">
+          <p class="quote" data-i18n="testimonials.q3">“Weekly summaries make it easy to track progress.”</p>
+          <div class="who" data-i18n="testimonials.a3">Founder — Coaching</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="wrap how" data-reveal>
+      <h2 data-i18n="how.heading">How it works</h2>
+      <ol class="steps">
+        <li data-i18n="how.s1">Buy a package and finish the 3‑minute onboarding (review link/QR, logo, consent list).</li>
+        <li data-i18n="how.s2">We launch a polite EN/ES email and one reminder to non‑clickers.</li>
+        <li data-i18n="how.s3">You receive a weekly email with KPIs and review count.</li>
+      </ol>
+    </section>
+
+    <!-- Feature grid -->
+    <section class="wrap features" data-reveal>
+      <h2 data-i18n="features.heading">Why this works</h2>
+      <div class="grid">
+        <article class="fcard">
+          <div class="ficon" aria-hidden="true">⏱️</div>
+          <h3 data-i18n="features.f1t">48‑hour launch</h3>
+          <p data-i18n="features.f1d">Fast setup after onboarding so you see results this week.</p>
+        </article>
+        <article class="fcard">
+          <div class="ficon" aria-hidden="true">🔒</div>
+          <h3 data-i18n="features.f2t">Compliant by design</h3>
+          <p data-i18n="features.f2d">No incentives and no gating—aligned with Google’s rules.</p>
+        </article>
+        <article class="fcard">
+          <div class="ficon" aria-hidden="true">🌐</div>
+          <h3 data-i18n="features.f3t">Bilingual EN/ES</h3>
+          <p data-i18n="features.f3d">Reach more customers with clear English and Spanish templates.</p>
+        </article>
+        <article class="fcard">
+          <div class="ficon" aria-hidden="true">📈</div>
+          <h3 data-i18n="features.f4t">Weekly visibility</h3>
+          <p data-i18n="features.f4d">Simple email summaries: sends, opens, clicks, and review totals.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="wrap pricing" id="pricing" data-reveal>
+      <h2 data-i18n="pricing.heading">Simple pricing</h2>
+      <p class="muted" data-i18n="pricing.note">48‑hour launch after onboarding. Pay up‑front. No incentives for reviews.</p>
+      <div class="pgrid">
+        <article class="pcard">
+          <h3 data-i18n="pricing.starter.title">Starter</h3>
+          <ul class="plist">
+            <li data-i18n="pricing.starter.i1">Up to 300 consenting contacts</li>
+            <li data-i18n="pricing.starter.i2">1 reminder to non‑clickers</li>
+            <li data-i18n="pricing.starter.i3">EN/ES templates + opt‑out</li>
+            <li data-i18n="pricing.starter.i4">Weekly KPI email (2 weeks)</li>
           </ul>
+          <a class="btn btn-dark pbtn" data-cta="starter" target="_blank" rel="noopener" data-i18n="cta.starter">Get Starter – $99</a>
+        </article>
 
-          <div class="cta-row">
-            <a class="btn btn--primary btn--xl" href="https://buy.stripe.com/test_cNi28qbzv57e8nfaJO2sM00" target="_blank" rel="noopener" data-lang="en">Get Starter – $99</a>
-            <a class="btn btn--primary btn--xl" href="https://buy.stripe.com/test_cNi28qbzv57e8nfaJO2sM00" target="_blank" rel="noopener" data-lang="es" hidden>Starter – $99</a>
-
-            <a class="btn btn--secondary btn--xl" href="https://buy.stripe.com/test_28E28qgTP1V27jb6ty2sM01" target="_blank" rel="noopener" data-lang="en">Standard – $199</a>
-            <a class="btn btn--secondary btn--xl" href="https://buy.stripe.com/test_28E28qgTP1V27jb6ty2sM01" target="_blank" rel="noopener" data-lang="es" hidden>Standard – $199</a>
-
-            <a class="btn btn--success btn--xl" href="https://buy.stripe.com/test_cNi6oGcDz2Z6gTLcRW2sM02" target="_blank" rel="noopener" data-lang="en">Rush/Pro – $299</a>
-            <a class="btn btn--success btn--xl" href="https://buy.stripe.com/test_cNi6oGcDz2Z6gTLcRW2sM02" target="_blank" rel="noopener" data-lang="es" hidden>Rush/Pro – $299</a>
-          </div>
-
-          <div class="hero__meta" data-lang="en">
-            <span class="badge">No incentives</span>
-            <span class="badge">No gating</span>
-            <span class="badge">Opt‑out in every email</span>
-          </div>
-          <div class="hero__meta" data-lang="es" hidden>
-            <span class="badge">Sin incentivos</span>
-            <span class="badge">Sin filtrar</span>
-            <span class="badge">Baja en cada correo</span>
-          </div>
-        </div>
-
-        <div class="hero__visual">
-          <div class="card glass tilt">
-            <div class="stat">
-              <span class="stat__num" id="counterReviews">+0</span>
-              <span class="stat__label" data-lang="en">new reviews in 2 weeks</span>
-              <span class="stat__label" data-lang="es" hidden>nuevas reseñas en 2 semanas</span>
-            </div>
-            <div class="stat">
-              <span class="stat__num" id="counterOpen">58%</span>
-              <span class="stat__label" data-lang="en">average open rate</span>
-              <span class="stat__label" data-lang="es" hidden>tasa de apertura promedio</span>
-            </div>
-            <div class="stat">
-              <span class="stat__num" id="counterClick">12%</span>
-              <span class="stat__label" data-lang="en">average click rate</span>
-              <span class="stat__label" data-lang="es" hidden>tasa de clic promedio</span>
-            </div>
-            <p class="muted" data-lang="en">Placeholders — replace with your results.</p>
-            <p class="muted" data-lang="es" hidden>Marcadores — reemplaza con tus resultados.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section id="how" class="section" data-reveal>
-      <div class="container">
-        <h2 data-lang="en">How it works</h2>
-        <h2 data-lang="es" hidden>Cómo funciona</h2>
-
-        <div class="steps">
-          <article class="step tilt">
-            <div class="step__num">1</div>
-            <h3 data-lang="en">Buy &amp; onboard (3 minutes)</h3>
-            <h3 data-lang="es" hidden>Compra y onboarding (3 minutos)</h3>
-            <p data-lang="en">Provide your Google review link/QR, logo, and a <b>consented</b> customer list.</p>
-            <p data-lang="es" hidden>Proporciona tu enlace/QR de reseñas de Google, logo y una lista de clientes <b>con consentimiento</b>.</p>
-          </article>
-
-          <article class="step tilt">
-            <div class="step__num">2</div>
-            <h3 data-lang="en">Polite request + reminder</h3>
-            <h3 data-lang="es" hidden>Solicitud amable + recordatorio</h3>
-            <p data-lang="en">We email all recent customers (EN/ES). One reminder to non‑clickers.</p>
-            <p data-lang="es" hidden>Enviamos correo a todos los clientes recientes (EN/ES). Un recordatorio a quienes no hicieron clic.</p>
-          </article>
-
-          <article class="step tilt">
-            <div class="step__num">3</div>
-            <h3 data-lang="en">Weekly summary</h3>
-            <h3 data-lang="es" hidden>Resumen semanal</h3>
-            <p data-lang="en">You get opens, clicks, and review count trend. No incentives. No gating.</p>
-            <p data-lang="es" hidden>Recibes aperturas, clics y tendencia de reseñas. Sin incentivos. Sin filtrar.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section class="section features" data-reveal>
-      <div class="container grid-3">
-        <div class="feature card tilt">
-          <h3 data-lang="en">Compliant by design</h3>
-          <h3 data-lang="es" hidden>Cumplimiento desde el diseño</h3>
-          <p data-lang="en">No incentives. No review gating. Clear opt‑out in every email.</p>
-          <p data-lang="es" hidden>Sin incentivos. Sin filtrar reseñas. Baja clara en cada correo.</p>
-        </div>
-        <div class="feature card tilt">
-          <h3 data-lang="en">Bilingual EN/ES</h3>
-          <h3 data-lang="es" hidden>Bilingüe EN/ES</h3>
-          <p data-lang="en">Reach more customers in Puerto Rico &amp; US with native copy.</p>
-          <p data-lang="es" hidden>Llega a más clientes en Puerto Rico y EE.UU. con texto nativo.</p>
-        </div>
-        <div class="feature card tilt">
-          <h3 data-lang="en">Fast 48h setup</h3>
-          <h3 data-lang="es" hidden>Implementación en 48h</h3>
-          <p data-lang="en">Launch quickly with a clean, consent‑based list.</p>
-          <p data-lang="es" hidden>Lanza rápido con una lista limpia y con consentimiento.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRICING -->
-    <section id="pricing" class="section pricing" data-reveal>
-      <div class="container">
-        <h2 data-lang="en">Pricing</h2>
-        <h2 data-lang="es" hidden>Precios</h2>
-
-        <div class="pricing__grid">
-          <article class="price card tilt">
-            <h3>Starter</h3>
-            <div class="price__value">$99</div>
-            <ul class="price__list">
-              <li data-lang="en">1 campaign, up to 300 contacts</li>
-              <li data-lang="es" hidden>1 campaña, hasta 300 contactos</li>
-              <li data-lang="en">EN/ES templates + opt‑out</li>
-              <li data-lang="es" hidden>Plantillas EN/ES + baja</li>
-              <li data-lang="en">Weekly KPI email (2 weeks)</li>
-              <li data-lang="es" hidden>Email semanal de KPIs (2 semanas)</li>
-            </ul>
-            <a class="btn btn--primary btn--block" href="https://buy.stripe.com/test_cNi28qbzv57e8nfaJO2sM00" target="_blank" rel="noopener" data-lang="en">Get Starter</a>
-            <a class="btn btn--primary btn--block" href="https://buy.stripe.com/test_cNi28qbzv57e8nfaJO2sM00" target="_blank" rel="noopener" data-lang="es" hidden>Comprar Starter</a>
-          </article>
-
-          <article class="price card tilt featured">
-            <div class="ribbon" data-lang="en">Most Popular</div>
-            <div class="ribbon" data-lang="es" hidden>Más Popular</div>
-            <h3>Standard</h3>
-            <div class="price__value">$199</div>
-            <ul class="price__list">
-              <li data-lang="en">Up to 1,000 contacts</li>
-              <li data-lang="es" hidden>Hasta 1,000 contactos</li>
-              <li data-lang="en">Branded sender + 2 reminders</li>
-              <li data-lang="es" hidden>Remitente con marca + 2 recordatorios</li>
-              <li data-lang="en">Weekly KPI (4 weeks)</li>
-              <li data-lang="es" hidden>KPIs semanales (4 semanas)</li>
-            </ul>
-            <a class="btn btn--success btn--block" href="https://buy.stripe.com/test_28E28qgTP1V27jb6ty2sM01" target="_blank" rel="noopener" data-lang="en">Choose Standard</a>
-            <a class="btn btn--success btn--block" href="https://buy.stripe.com/test_28E28qgTP1V27jb6ty2sM01" target="_blank" rel="noopener" data-lang="es" hidden>Elegir Standard</a>
-          </article>
-
-          <article class="price card tilt">
-            <h3>Rush/Pro</h3>
-            <div class="price__value">$299</div>
-            <ul class="price__list">
-              <li data-lang="en">Same‑day launch (assets ready)</li>
-              <li data-lang="es" hidden>Lanzamiento el mismo día (con assets listos)</li>
-              <li data-lang="en">Custom segments (recency/type)</li>
-              <li data-lang="es" hidden>Segmentos personalizados (recencia/tipo)</li>
-              <li data-lang="en">Review count monitor + chart</li>
-              <li data-lang="es" hidden>Monitoreo de reseñas + gráfica</li>
-            </ul>
-            <a class="btn btn--secondary btn--block" href="https://buy.stripe.com/test_cNi6oGcDz2Z6gTLcRW2sM02" target="_blank" rel="noopener" data-lang="en">Go Pro</a>
-            <a class="btn btn--secondary btn--block" href="https://buy.stripe.com/test_cNi6oGcDz2Z6gTLcRW2sM02" target="_blank" rel="noopener" data-lang="es" hidden>Ir Pro</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ + COMPLIANCE -->
-    <section id="faq" class="section" data-reveal>
-      <div class="container grid-2">
-        <div>
-          <h2 data-lang="en">FAQs</h2>
-          <h2 data-lang="es" hidden>Preguntas frecuentes</h2>
-
-          <details class="faq">
-            <summary data-lang="en"><b>Is this compliant?</b></summary>
-            <summary data-lang="es" hidden><b>¿Cumple con las reglas?</b></summary>
-            <div class="faq__content">
-              <p data-lang="en">Yes—no incentives, no review gating, and a clear opt‑out in every email. We ask <em>all</em> recent customers politely.</p>
-              <p data-lang="es" hidden>Sí—sin incentivos, sin filtrar reseñas y con un enlace claro de baja en cada correo. Pedimos a <em>todos</em> los clientes recientes, con respeto.</p>
-            </div>
-          </details>
-
-          <details class="faq">
-            <summary data-lang="en"><b>What do you need from me?</b></summary>
-            <summary data-lang="es" hidden><b>¿Qué necesitas de mí?</b></summary>
-            <div class="faq__content">
-              <p data-lang="en">Your Google review link/QR, brand logo, and a <b>consented</b> customer list (CSV).</p>
-              <p data-lang="es" hidden>Tu enlace/QR de reseñas de Google, logo y una lista de clientes <b>con consentimiento</b> (CSV).</p>
-            </div>
-          </details>
-
-          <details class="faq">
-            <summary data-lang="en"><b>How fast?</b></summary>
-            <summary data-lang="es" hidden><b>¿Qué tan rápido?</b></summary>
-            <div class="faq__content">
-              <p data-lang="en">We launch within 48 hours after you finish onboarding.</p>
-              <p data-lang="es" hidden>Lanzamos en 48 horas después de completar el onboarding.</p>
-            </div>
-          </details>
-        </div>
-
-        <div class="card glass compliance">
-          <h3 data-lang="en">Compliance notes</h3>
-          <h3 data-lang="es" hidden>Notas de cumplimiento</h3>
-          <ul>
-            <li data-lang="en">Google prohibits incentivized reviews and review gating.</li>
-            <li data-lang="es" hidden>Google prohíbe incentivos y filtrar reseñas por satisfacción.</li>
-            <li data-lang="en">We only email consented contacts and include an opt‑out.</li>
-            <li data-lang="es" hidden>Solo enviamos a contactos con consentimiento e incluimos opción de baja.</li>
+        <article class="pcard best">
+          <div class="badge" data-i18n="pricing.popular">Most popular</div>
+          <h3 data-i18n="pricing.standard.title">Standard</h3>
+          <ul class="plist">
+            <li data-i18n="pricing.standard.i1">Up to 1,000 consenting contacts</li>
+            <li data-i18n="pricing.standard.i2">2 reminders to non‑clickers</li>
+            <li data-i18n="pricing.standard.i3">Sender setup guidance (SPF/DKIM)</li>
+            <li data-i18n="pricing.standard.i4">Weekly KPI email (4 weeks)</li>
           </ul>
-          <p class="muted" data-lang="en">We’ll ask for your official Google “Write a review” link during onboarding.</p>
-          <p class="muted" data-lang="es" hidden>Solicitaremos tu enlace oficial de “Escribir reseña” durante el onboarding.</p>
-        </div>
+          <a class="btn btn-blue pbtn" data-cta="standard" target="_blank" rel="noopener" data-i18n="cta.standard">Standard – $199</a>
+        </article>
+
+        <article class="pcard">
+          <h3 data-i18n="pricing.pro.title">Rush/Pro</h3>
+          <ul class="plist">
+            <li data-i18n="pricing.pro.i1">Same‑day launch (assets ready)</li>
+            <li data-i18n="pricing.pro.i2">Custom segments (recency/type)</li>
+            <li data-i18n="pricing.pro.i3">Review‑count monitor + chart</li>
+            <li data-i18n="pricing.pro.i4">Team brief & handoff</li>
+          </ul>
+          <a class="btn btn-green pbtn" data-cta="pro" target="_blank" rel="noopener" data-i18n="cta.pro">Rush/Pro – $299</a>
+        </article>
       </div>
     </section>
 
-    <!-- STICKY CTA -->
-    <div class="sticky-cta" id="stickyCta" hidden>
-      <a class="btn btn--primary" href="https://buy.stripe.com/test_28E28qgTP1V27jb6ty2sM01" target="_blank" rel="noopener" data-lang="en">Start — Standard $199</a>
-      <a class="btn btn--primary" href="https://buy.stripe.com/test_28E28qgTP1V27jb6ty2sM01" target="_blank" rel="noopener" data-lang="es" hidden>Comenzar — Standard $199</a>
-    </div>
+    <!-- FAQs (native accessible accordion) -->
+    <section class="wrap faqs" data-reveal>
+      <h2 data-i18n="faq.heading">FAQs</h2>
 
+      <details>
+        <summary data-i18n="faq.q1">Is this compliant?</summary>
+        <p data-i18n="faq.a1">Yes. We never offer incentives and we never gate by sentiment. Every recipient gets a clear opt‑out.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="faq.q2">What do you need from me?</summary>
+        <p data-i18n="faq.a2">Your official Google review link/QR, brand logo, and a consented customer list (CSV).</p>
+      </details>
+
+      <details>
+        <summary data-i18n="faq.q3">How fast is launch?</summary>
+        <p data-i18n="faq.a3">We launch within 48 hours after you complete onboarding.</p>
+      </details>
+    </section>
+
+    <!-- Compliance note -->
+    <section class="wrap compliance" role="note" data-reveal>
+      <strong data-i18n="compliance.line">Compliance:</strong>
+      <span data-i18n="compliance.body">Google prohibits incentivized reviews and review gating. We ask all recent customers politely and include a one‑click opt‑out.</span>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer__inner">
-      <div>
-        <p><strong data-lang="en">Questions?</strong><strong data-lang="es" hidden>¿Preguntas?</strong>
-        <a href="mailto:hello@example.com">hello@example.com</a></p>
-        <p class="muted" data-lang="en">Business address: Add your postal address here for emails.</p>
-        <p class="muted" data-lang="es" hidden>Dirección comercial: Añade aquí tu dirección postal para correos.</p>
-      </div>
-      <div class="footer__right">
-        <button id="toTop" class="btn btn--ghost" aria-label="Back to top">↑</button>
-      </div>
+  <!-- Footer -->
+  <footer class="wrap footer" data-reveal>
+    <div>
+      <span data-i18n="footer.contactLabel">Questions?</span>
+      <a id="contactEmail" href="mailto:" data-i18n="footer.contactCta">Email us</a>
+      <span aria-hidden="true"> • </span>
+      <a id="onboardingLink" href="#" target="_blank" rel="noopener" data-i18n="footer.onboarding">Onboarding form</a>
     </div>
+    <div class="muted" id="modeBadge" aria-live="polite"></div>
   </footer>
 
-  <script src="assets/js/main.js" defer></script>
+  <script defer src="./assets/app.min.js"></script>
 </body>
 </html>
