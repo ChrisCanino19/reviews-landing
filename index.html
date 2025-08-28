@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Reviews Request Machine (EN/ES) — Compliant, 48h Setup</title>
+  <meta name="description" content="Turn last month's happy customers into honest Google reviews—compliant, bilingual, live in 48 hours. No incentives, no review gating.">
+  <link rel="canonical" href="https://chriscanino19.github.io/reviews-landing/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Google Reviews Request Machine (EN/ES) — Compliant, 48h Setup">
+  <meta property="og:description" content="Turn last month's happy customers into honest Google reviews—compliant, bilingual, live in 48 hours. No incentives, no review gating.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Google+Reviews+Request+Machine">
+  <meta property="og:url" content="https://chriscanino19.github.io/reviews-landing/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Google Reviews Request Machine (EN/ES) — Compliant, 48h Setup">
+  <meta name="twitter:description" content="Turn last month's happy customers into honest Google reviews—compliant, bilingual, live in 48 hours.">
+  <meta name="twitter:image" content="https://via.placeholder.com/1200x630?text=Google+Reviews+Request+Machine">
+
+  <!-- Google Fonts - Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Lottie -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+</head>
+<body>
+  <!-- Top Banner -->
+  <div class="top-banner" data-i18n="topBanner">
+    TEST MODE — All payment links are for testing purposes only
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="8" fill="url(#logo-gradient)"/>
+          <path d="M20 10L25 15L20 20L15 15L20 10Z" fill="white"/>
+          <path d="M20 20L25 25L20 30L15 25L20 20Z" fill="white"/>
+          <defs>
+            <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40">
+              <stop stop-color="#6366f1"/>
+              <stop offset="1" stop-color="#8b5cf6"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span data-i18n="logoText">Reviews Request Machine</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#packages" data-i18n="navPackages">Packages</a></li>
+          <li><a href="#how-it-works" data-i18n="navHowItWorks">How it works</a></li>
+          <li><a href="#compliance" data-i18n="navCompliance">Compliance</a></li>
+          <li><a href="#faq" data-i18n="navFaq">FAQs</a></li>
+          <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-toggle">
+        <button id="lang-en" class="active">EN</button>
+        <button id="lang-es">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <h1 data-i18n="heroTitle">Google Reviews Request Machine (EN/ES) — Compliant, 48h Setup</h1>
+        <p data-i18n="heroSubtitle">Turn last month's happy customers into honest Google reviews—no incentives, no gating.</p>
+        <div class="hero-buttons">
+          <a href="https://buy.stripe.com/test_cNi28qbzv57e8nfaJO2sM00" target="_blank" class="btn btn-primary" data-i18n="heroBtnStarter">Get Starter – $99</a>
+          <a href="https://buy.stripe.com/test_28E28qgTP1V27jb6ty2sM01" target="_blank" class="btn btn-secondary" data-i18n="heroBtnStandard">Standard – $199</a>
+          <a href="https://buy.stripe.com/test_cNi6oGcDz2Z6gTLcRW2sM02" target="_blank" class="btn btn-accent" data-i18n="heroBtnPro">Rush/Pro – $299</a>
+        </div>
+        <p data-i18n="heroOnboarding">You'll complete a 3-minute onboarding after checkout.</p>
+      </div>
+      <div class="hero-lottie" id="hero-lottie"></div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="social-proof">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="socialProofTitle">Trusted by Businesses</h2>
+        <p data-i18n="socialProofSubtitle">See what our clients have to say about our service</p>
+      </div>
+
+      <div class="testimonials">
+        <div class="testimonial">
+          <div class="testimonial-content" data-i18n="testimonial1">
+            "The review request service helped us increase our Google reviews by 40% in just one month. Completely compliant and professional."
+          </div>
+          <div class="testimonial-author" data-i18n="testimonial1Author">— Restaurant Owner</div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-content" data-i18n="testimonial2">
+            "Bilingual support was exactly what we needed. Our Spanish-speaking customers now leave reviews just as often as English speakers."
+          </div>
+          <div class="testimonial-author" data-i18n="testimonial2Author">— Retail Manager</div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-content" data-i18n="testimonial3">
+            "Setup was incredibly fast. We were up and running in less than 48 hours, and the weekly reports are very helpful."
+          </div>
+          <div class="testimonial-author" data-i18n="testimonial3Author">— Service Provider</div>
+        </div>
+      </div>
+
+      <div class="client-logos">
+        <div class="client-logo">Logo 1</div>
+        <div class="client-logo">Logo 2</div>
+        <div class="client-logo">Logo 3</div>
+        <div class="client-logo">Logo 4</div>
+        <div class="client-logo">Logo 5</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages -->
+  <section class="packages" id="packages">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="packagesTitle">Choose Your Package</h2>
+        <p data-i18n="packagesSubtitle">One-time setup for ongoing Google review requests</p>
+      </div>
+
+      <div class="pricing">
+        <div class="pricing-card card">
+          <h3 data-i18n="packageStarterTitle">Starter</h3>
+          <div class="price">$99</div>
+          <ul>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span data-i18n="packageStarterFeature1">Up to 100 review requests</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span data-i18n="packageStarterFeature2">English or Spanish emails</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span data-i18n="packageStarterFeature3">Weekly summary reports</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span data-i18n="packageStarterFeature4">48-hour setup</span>
+            </li>
+          </ul>
+          <a href="https://buy.stripe.com/test_cNi28qbzv57e8nfaJO2sM00" target="_blank" class="btn btn-primary" data-i18n="packageStarterBtn">Buy Starter</a>
+        </div>
+
+        <div class="pricing-card card">
+          <h3 data-i18n="packageStandardTitle">Standard</h3>
+          <div class="price">$199</div>
+          <ul>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span data-i18n="packageStandardFeature1">Up to 500 review requests</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span data-i18n="packageStandardFeature2">Bilingual emails (EN + ES)</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span data-i18n="packageStandardFeature3">Weekly summary reports</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span data-i18n="packageStandardFeature4">Custom email templates</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span data-i18n="packageStandardFeature5">48-hour setup</span>
+            </li>
+          </ul>
+          <a href="https://buy.stripe.com/test_28E28qgTP1V27jb6ty2sM01" target="_blank" class="btn btn-secondary" data-i18n="packageStandardBtn">Buy Standard</a>
+        </div>
+
+        <div class="pricing-card card">
+          <h3 data-i18n="packageProTitle">Rush/Pro</h3>
+          <div class="price">$299</div>
+          <ul>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span data-i18n="packageProFeature1">Unlimited review requests</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span data-i18n="packageProFeature2">Bilingual emails (EN + ES)</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span data-i18n="packageProFeature3">Daily summary reports</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span data-i18n="packageProFeature4">Custom email templates</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span data-i18n="packageProFeature5">24-hour rush setup</span>
+            </li>
+          </ul>
+          <a href="https://buy.stripe.com/test_cNi6oGcDz2Z6gTLcRW2sM02" target="_blank" class="btn btn-accent" data-i18n="packageProBtn">Buy Rush/Pro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="howItWorksTitle">How It Works</h2>
+        <p data-i18n="howItWorksSubtitle">Simple process to get more Google reviews</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-icon">1</div>
+          <h3 data-i18n="step1Title">Buy + Onboarding</h3>
+          <p data-i18n="step1Description">Choose your package and complete our simple 3-minute onboarding process.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-icon">2</div>
+          <h3 data-i18n="step2Title">We Send Requests</h3>
+          <p data-i18n="step2Description">We send personalized review requests to your customers with polite reminders.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-icon">3</div>
+          <h3 data-i18n="step3Title">Get Results</h3>
+          <p data-i18n="step3Description">Receive weekly summary reports with your new review count and insights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance -->
+  <section class="compliance-section" id="compliance">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="complianceTitle">Fully Compliant</h2>
+        <p data-i18n="complianceSubtitle">We follow Google's review policies strictly</p>
+      </div>
+
+      <div class="compliance">
+        <ul class="compliance-list">
+          <li>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+            <span data-i18n="complianceNoIncentives">No incentives</span>
+          </li>
+          <li>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+            <span data-i18n="complianceNoGating">No review gating</span>
+          </li>
+          <li>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+            <span data-i18n="complianceAllCustomers">We ask all recent customers</span>
+          </li>
+          <li>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+            <span data-i18n="complianceOptOut">Clear opt-out in every email</span>
+          </li>
+        </ul>
+
+        <p data-i18n="complianceNote">We only use consented lists provided by you. All emails can be in English, Spanish, or both languages.</p>
+
+        <div class="compliance-note">
+          <p data-i18n="complianceGooglePolicy">Google prohibits incentivized or gated reviews; we comply fully with all policies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="faqTitle">Frequently Asked Questions</h2>
+        <p data-i18n="faqSubtitle">Everything you need to know about our service</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+            <span data-i18n="faqQuestion1">Is this service compliant with Google's policies?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq1">
+            <div class="faq-answer-content" data-i18n="faqAnswer1">
+              Yes, we strictly follow Google's review policies. We never offer incentives for reviews, we don't gate reviews (only asking happy customers), and we include a clear opt-out in every email. We ask all recent customers, not just those likely to leave positive reviews.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+            <span data-i18n="faqQuestion2">How quickly can I get started?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq2">
+            <div class="faq-answer-content" data-i18n="faqAnswer2">
+              We launch within 48 hours after you complete the onboarding process. For our Rush/Pro package, we can set everything up within 24 hours. The onboarding itself takes only about 3 minutes to complete.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+            <span data-i18n="faqQuestion3">What do I need to provide?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq3">
+            <div class="faq-answer-content" data-i18n="faqAnswer3">
+              You'll need to provide your Google review link or QR code, a consented contact list of recent customers, your preferred sender address, and your logo/brand tone if you want custom email templates.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq4">
+            <span data-i18n="faqQuestion4">How is customer data handled?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq4">
+            <div class="faq-answer-content" data-i18n="faqAnswer4">
+              We take data privacy seriously. Customer information is used only for sending review requests and is deleted after 30 days. We never share or sell customer data to third parties.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq5">
+            <span data-i18n="faqQuestion5">What email domain will be used?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq5">
+            <div class="faq-answer-content" data-i18n="faqAnswer5">
+              We can send emails from your domain or from our system domain. Using your domain typically results in higher open rates but requires some simple DNS configuration. We'll guide you through this process during onboarding.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq6">
+            <span data-i18n="faqQuestion6">What kind of results can I expect?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq6">
+            <div class="faq-answer-content" data-i18n="faqAnswer6">
+              Results vary based on your customer relationships and industry, but our clients typically see a 20-40% increase in Google reviews within the first month. The bilingual approach often yields even better results for businesses with Spanish-speaking customers.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="contactTitle">Ready to Get Started?</h2>
+        <p data-i18n="contactSubtitle">Have questions? Reach out to our team</p>
+      </div>
+
+      <div class="contact-buttons">
+        <a href="mailto:info@reviewsrequestmachine.com" class="btn btn-primary" data-i18n="contactEmail">Email Us</a>
+        <!-- TODO: Replace with real onboarding URL when live -->
+        <a href="#" class="btn btn-secondary pulse" data-i18n="contactOnboarding">Start Onboarding</a>
+      </div>
+
+      <p style="margin-top: 32px; color: var(--gray);" data-i18n="contactTestNote">
+        Note: The Stripe links above are for testing purposes only. No actual charges will be made.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3 data-i18n="footerAbout">About Us</h3>
+          <p data-i18n="footerAboutText">We help businesses get more Google reviews through compliant, bilingual email requests.</p>
+        </div>
+
+        <div class="footer-column">
+          <h3 data-i18n="footerQuickLinks">Quick Links</h3>
+          <ul>
+            <li><a href="#packages" data-i18n="footerPackages">Packages</a></li>
+            <li><a href="#how-it-works" data-i18n="footerHowItWorks">How It Works</a></li>
+            <li><a href="#compliance" data-i18n="footerCompliance">Compliance</a></li>
+            <li><a href="#faq" data-i18n="footerFaq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 data-i18n="footerContact">Contact</h3>
+          <ul>
+            <li><a href="mailto:info@reviewsrequestmachine.com" data-i18n="footerEmail">info@reviewsrequestmachine.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2023 Reviews Request Machine. <span data-i18n="footerComplianceNote">Google prohibits incentivized or gated reviews; we comply fully.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <div class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </div>
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Google Reviews Request (EN/ES)",
+    "description": "Turn last month's happy customers into honest Google reviews—compliant, bilingual, live in 48 hours.",
+    "areaServed": [
+      "United States",
+      "Puerto Rico"
+    ],
+    "provider": {
+      "@type": "Organization",
+      "name": "Reviews Request Machine"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Starter Package",
+        "price": "99.00",
+        "priceCurrency": "USD",
+        "description": "Up to 100 review requests, English or Spanish emails, weekly summary reports, 48-hour setup"
+      },
+      {
+        "@type": "Offer",
+        "name": "Standard Package",
+        "price": "199.00",
+        "priceCurrency": "USD",
+        "description": "Up to 500 review requests, bilingual emails, weekly summary reports, custom email templates, 48-hour setup"
+      },
+      {
+        "@type": "Offer",
+        "name": "Rush/Pro Package",
+        "price": "299.00",
+        "priceCurrency": "USD",
+        "description": "Unlimited review requests, bilingual emails, daily summary reports, custom email templates, 24-hour rush setup"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Site JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
