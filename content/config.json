@@ -1,0 +1,17 @@
+{
+  "mode": "test",
+  "stripe": {
+    "starter": "https://buy.stripe.com/test_cNi28qbzv57e8nfaJO2sM00",
+    "standard": "https://buy.stripe.com/test_28E28qgTP1V27jb6ty2sM01",
+    "pro": "https://buy.stripe.com/test_cNi6oGcDz2Z6gTLcRW2sM02",
+    "starter_live": "",
+    "standard_live": "",
+    "pro_live": ""
+  },
+  "contact_email": "you@yourdomain.com",
+  "onboarding_url": "#",
+  "brand": {
+    "name": "Reviews Request Machine",
+    "canonical": "https://chriscanino19.github.io/reviews-landing/"
+  }
+}
