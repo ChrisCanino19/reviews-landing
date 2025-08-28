@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- Speech bubble background -->
-  <path d="M8 8h48v32H24l-16 16V8z" fill="#006d77"/>
-  <!-- Star glyph -->
-  <polygon points="32,16 36,26 46,26 38,32 42,42 32,36 22,42 26,32 18,26 28,26" fill="#f4d35e"/>
-</svg>
